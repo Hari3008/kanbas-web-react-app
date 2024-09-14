@@ -129,7 +129,7 @@ export default function Lab1() {
                 </tr>
                 <tr>
                   <td>Q9</td> {/* table data / cell */}
-                  <td>MongoDB</td>
+                  <td>Firebase</td>
                   <td>2/3/29</td>
                   <td>85</td>
                 </tr>
