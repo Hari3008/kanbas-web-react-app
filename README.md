@@ -1,6 +1,7 @@
-<<<<<<< HEAD
+
 # kanbas-web-react-app
 Creating a simple Web Page based off Canvas
+
 =======
 # Getting Started with Create React App
 
