@@ -1,6 +1,6 @@
 
 # kanbas-web-react-app
-Creating a simple Web Page based off Canvas
+Creating a simple Web Page based off Canvas - CS 5610
 
 =======
 # Getting Started with Create React App
