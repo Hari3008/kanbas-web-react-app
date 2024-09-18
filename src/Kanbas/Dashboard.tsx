@@ -29,7 +29,7 @@ export default function Dashboard() {
               to="/Kanbas/Courses/1234/Home"
             >
               {" "}
-              CS1234 React JS{" "}
+              CS1234 Node JS{" "}
             </Link>
             <p className="wd-dashboard-course-title">
               Full Stack software developer{" "}
@@ -45,7 +45,7 @@ export default function Dashboard() {
               to="/Kanbas/Courses/1234/Home"
             >
               {" "}
-              CS1234 React JS{" "}
+              CS1234 Angular JS{" "}
             </Link>
             <p className="wd-dashboard-course-title">
               Full Stack software developer{" "}
@@ -61,7 +61,7 @@ export default function Dashboard() {
               to="/Kanbas/Courses/1234/Home"
             >
               {" "}
-              CS1234 React JS{" "}
+              CS1234 Express JS{" "}
             </Link>
             <p className="wd-dashboard-course-title">
               Full Stack software developer{" "}

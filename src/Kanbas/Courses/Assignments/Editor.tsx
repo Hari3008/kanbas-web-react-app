@@ -16,6 +16,7 @@ export default function AssignmentEditor() {
               <input id="wd-points" value={100} />
             </td>
           </tr>
+          <br />
           <tr>
             <td align="right" valign="top">
               <label htmlFor="wd-group">Assignment Group</label>
@@ -28,6 +29,7 @@ export default function AssignmentEditor() {
                 </select>
             </td>
           </tr>
+          <br />
           <tr>
             <td align="right" valign="top">
               <label htmlFor="wd-display-grade-as">Display Grade</label>
@@ -40,6 +42,7 @@ export default function AssignmentEditor() {
                 </select>
             </td>
           </tr>
+          <br />
           <tr>
             <td align="right" valign="top">
                 <label htmlFor="wd-submission-type">Submission Type</label>
@@ -50,7 +53,10 @@ export default function AssignmentEditor() {
                     <option value="in-person">In Person</option>
                 </select>
             </td>
-            <td align="right" valign="top">
+          </tr>
+          <br />
+          <tr>
+          <td align="right" valign="top">
                 <label htmlFor="wd-submission-type">Online Entry Options</label>
             </td>
             <td>
@@ -63,7 +69,7 @@ export default function AssignmentEditor() {
                 </select>
             </td>
           </tr>
-
+          <br />
           <tr>
             <td align="right" valign="top">
                 <label htmlFor="wd-assign-to">Assign anyone to</label>
@@ -71,25 +77,47 @@ export default function AssignmentEditor() {
             <td>
               <input id="wd-assign-to" value={"Everyone"} />
             </td>
+          </tr>
+          <br />
+            <tr>
             <td>
                 <label htmlFor="wd-due-date">Due</label>
             </td>
             <td>
                 <input type="date" id="wd-due-date" name="wd-due-date"></input>
-            </td>
+              </td>
+            </tr>
+            <br />
+
+            <tr>
             <td>
                 <label htmlFor="wd-available-from">Available from</label>
             </td>
             <td>
                 <input type="date" id="wd-available-from" name="wd-available-from"></input>
             </td>   
-            <td>
-                <label htmlFor="wd-available-until">Available until</label>
-            </td>
-            <td>
-                <input type="date" id="wd-available-until" name="wd-available-until"></input>
-            </td> 
+            </tr>
+
+            <br />
+            <tr>
+              <td>
+                  <label htmlFor="wd-available-until">Available until</label>
+              </td>
+              <td>
+                  <input type="date" id="wd-available-until" name="wd-available-until"></input>
+              </td> 
+            </tr>
+            <br />
+          <hr />
+          <tr>
+            <button>
+              Cancel
+            </button>
+            <button>
+              Save
+            </button>
           </tr>
+
 
         </table>
       </div>

@@ -27,11 +27,7 @@ export default function TOC() {
           Kanbas
         </Link>
       </li>
-      <li>
-        <Link id="wd-github" to="https://github.com/Hari3008">
-          GitHub (Hari3008)
-        </Link>
-      </li>
+      
     </ul>
   );
 }
