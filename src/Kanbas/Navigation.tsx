@@ -1,33 +1,70 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import { AiOutlineDashboard } from "react-icons/ai";
+import { IoCalendarOutline } from "react-icons/io5";
+import { SlCalender } from "react-icons/sl";
+import { LiaBookSolid, LiaCogSolid } from "react-icons/lia";
+import { IoSettingsOutline } from "react-icons/io5";
+import { FaInbox, FaRegCircleUser } from "react-icons/fa6";
+
 export default function KanbasNavigation() {
+
   return (
-    <div id="wd-kanbas-navigation">
-      <a href="https://www.northeastern.edu/" id="wd-neu-link" target="_blank">
-        Northeastern
+    <div id="wd-kanbas-navigation" style={{ width: 120 }} 
+         className="list-group rounded-0 position-fixed
+         bottom-0 top-0 d-none d-md-block bg-black z-2">
+      <a href="https://www.northeastern.edu/" id="wd-neu-link" target="_blank" className="list-group-item bg-black border-0 text-center">
+      <img src="/images/NEU.png" width="75px" /> 
       </a>
       <br />
-      <Link to="/Kanbas/Account" id="wd-account-link">
+      <NavLink to="/Kanbas/Account" id="wd-account-link"  className="list-group-item text-center border-0" style={({ isActive }) => ({
+            backgroundColor: isActive ? "white" : "black",
+            color: isActive ? "red" : "white",
+          })}>
+      <FaRegCircleUser className="fs-1 text text-grey"/><br />
         Account
-      </Link>
+      </NavLink>
       <br />
-      <Link to="/Kanbas/Dashboard" id="wd-dashboard-link">
+      <NavLink to="/Kanbas/Dashboard" id="wd-dashboard-link" className="list-group-item text-center border-0"
+                    style={({ isActive }) => ({
+                    backgroundColor: isActive ? "white" : "black",
+                    color: isActive ? "red" : "white",
+                  })}>
+        <AiOutlineDashboard className="fs-1 text-danger" /><br />
+
         Dashboard
-      </Link>
+      </NavLink>
       <br />
-      <Link to="/Kanbas/Courses" id="wd-course-link">
+      <NavLink to="/Kanbas/Courses" id="wd-course-link" className="list-group-item text-center border-0" 
+                    style={({ isActive }) => ({
+                    backgroundColor: isActive ? "white" : "black",
+                    color: isActive ? "red" : "white",
+                  })}>
+        <LiaBookSolid className="fs-1 text-danger" /><br /> 
         Courses
-      </Link>
+      </NavLink>
       <br />
-      <Link to="/Kanbas/Calendar" id="wd-calendar-link">
+      <NavLink to="/Kanbas/Calendar" id="wd-calendar-link" className="list-group-item text-center border-0" 
+                    style={({ isActive }) => ({
+                    backgroundColor: isActive ? "white" : "black",
+                    color: isActive ? "red" : "white",
+                  })}>
+                    <SlCalender className="fs-1 text-danger"/><br /> 
         Calendar
-      </Link>
+      </NavLink>
       <br />
-      <Link to="/Kanbas/Inbox" id="wd-inbox-link">
+        <NavLink to="/Kanbas/Inbox" id="wd-inbox-link" className="list-group-item text-center border-0" 
+                    style={({ isActive }) => ({
+                      backgroundColor: isActive ? "white" : "black",
+                      color: isActive ? "red" : "white",
+                    })}>
+      <FaInbox className="fs-1 text-danger"/><br /> 
         Inbox
-      </Link>
+      </NavLink>
       <br />
-      <Link to="/Labs" id="wd-labs-link">
-        Labs
+      <Link to="/Labs" id="wd-labs-link" className="list-group-item text-white
+                   bg-black text-center border-0">
+      <IoSettingsOutline className="fs-1 text-danger"/><br />
+      Labs
       </Link>
       <br />
     </div>
