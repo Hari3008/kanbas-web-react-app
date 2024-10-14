@@ -15,6 +15,8 @@ export default function Labs() {
       <Link id="wd-github" to="https://github.com/Hari3008">
           GitHub (Hari3008)
       </Link>
+      <br />
+      <br />
       <h1>Labs</h1>
       <TOC />
       <Routes>

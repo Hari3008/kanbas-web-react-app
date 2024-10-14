@@ -9,7 +9,6 @@ export default function Kanbas() {
   return (
     <div id="wd-kanbas">
       {/* <h1>Kanbas</h1> */}
-
               <KanbasNavigation />
               <div className="wd-main-content-offset p-3">
               <Routes>
