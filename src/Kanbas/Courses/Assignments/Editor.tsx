@@ -1,5 +1,6 @@
 import { useParams } from "react-router";
 import * as db from "../../Database";
+import { Link } from "react-router-dom";
 export default function AssignmentEditor() {
   const { aid } = useParams();
   const assignments = db.assignments; 
@@ -159,12 +160,12 @@ The Kanbas application should include a link to navigate back to the landing pag
       <hr />
 
       <div className="d-flex justify-content-end">
-        <button type="button" className="btn btn-secondary me-2">
+        <Link type="button" className="btn btn-secondary me-2" to={`../Assignments`}>
           Cancel
-        </button>
-        <button type="submit" className="btn btn-danger">
+        </Link>
+        <Link type="submit" className="btn btn-danger" to={`../Assignments`}>
           Save
-        </button>
+        </Link>
       </div>
     </div>
   );

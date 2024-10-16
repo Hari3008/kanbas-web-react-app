@@ -1,7 +1,5 @@
 import { BsGripVertical } from "react-icons/bs";
-import ModuleControlButtons from "../Modules/ModuleControlButtons";
 import LessonControlButtons from "../Modules/LessonControlButtons";
-import ModulesControls from "../Modules/ModulesControls";
 import AssignmentsControls from "./AssignmentsControls";
 import { HiOutlinePencilAlt } from "react-icons/hi";
 import { useParams } from "react-router";
