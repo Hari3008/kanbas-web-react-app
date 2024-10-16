@@ -32,7 +32,7 @@ export default function Assignments() {
           <HiOutlinePencilAlt className="me-2 fs-3 " color="green"/>
         </div>
         <div className="col-md-9">
-        <b><a className="wd-assignment-link text-decoration-none text-muted" href="#/Kanbas/Courses/1234/Assignments/123">
+        <b><a className="wd-assignment-link text-decoration-none text-muted" href={`#/Kanbas/Courses/${assignment.course}/Assignments/${assignment._id}`}>
                 {assignment.title}
         </a></b>
           <div className="module-info text-muted">
