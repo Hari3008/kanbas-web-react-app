@@ -7,12 +7,6 @@ body * {  font-family: Arial, Helvetica, sans-serif;  }
   }
 }
 
-@media (max-width: 768px) {
-  #wd-courses-navigation{
-    display: none;
-  }
-}
-
 
 .list-group.wd > .list-group-item.active {
     color: black;
