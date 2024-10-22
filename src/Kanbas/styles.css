@@ -2,10 +2,17 @@ body   {  margin: 0;  padding: 0;  }
 body * {  font-family: Arial, Helvetica, sans-serif;  }
 
 @media (min-width: 768px) {
-  #wd-kanbas .wd-main-content-offset {
+  #wd-kanbas .wd-main-content-offset{
     padding-left: 140px !important;
   }
 }
+
+@media (max-width: 768px) {
+  #wd-courses-navigation{
+    display: none;
+  }
+}
+
 
 .list-group.wd > .list-group-item.active {
     color: black;
