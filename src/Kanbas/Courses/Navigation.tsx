@@ -8,7 +8,7 @@ export default function CoursesNavigation() {
   console.log(cid);
   return (
     
-    <div id="wd-courses-navigation" className="wd list-group fs-5 rounded-0">
+    <div id="wd-courses-navigation" className="wd list-group fs-5 rounded-0 d-none d-md-block">
       {links.map((link)=>(
         <NavLink
         to={`/Kanbas/Courses/${cid}/${link}`}
