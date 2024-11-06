@@ -13,10 +13,10 @@ export default function ModuleControlButtons({ moduleId, deleteModule, editModul
   return (
     <div className="float-end">
       {!disabled && (
-        <div>
+        <>
           <FaPencil onClick={() => editModule(moduleId)} className="text-primary me-3" />
           <FaTrash className="text-danger me-2 mb-1" onClick={() => deleteModule(moduleId)}/>
-        </div>
+        </>
       )}
       
       <GreenCheckmark />

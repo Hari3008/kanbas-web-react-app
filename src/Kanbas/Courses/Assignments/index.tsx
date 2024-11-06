@@ -50,12 +50,12 @@ export default function Assignments() {
                         <span className="text-danger">Multiple Modules</span> |
                         <span>
                           <b>
-                            Not available until {assignment.availableFrom ?? "May 6 at 12:00am"}
+                            Not available until {assignment.availableFrom ?? "June 1 at 12:00am"}
                           </b>
                         </span>
                         |<br />
                         <span>
-                          <b>Due</b> {assignment.dueDate ?? " May 13 at 11:59pm"}
+                          <b>Due</b> {assignment.dueDate ?? " June 30 at 11:59pm"}
                         </span>
                         |<span> {assignment.points ?? "100"} pts</span>
                       </div>

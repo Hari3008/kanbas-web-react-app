@@ -26,7 +26,7 @@ export default function AssignmentsControls() {
         </>
       )}
 
-      <div className="float-start me-5 ">
+      <div className="float-end me-5 ">
         <div className="input-group mt-1" style={{ width: "300px" }}>
           <span className="input-group-text" id="basic-addon1">
             <FaSearch />
