@@ -3,10 +3,14 @@ import Lab1 from "./Lab1";
 import Lab2 from "./Lab2";
 import TOC from "./TOC";
 import Lab3 from "./Lab3";
+import Lab4 from "./Lab4";
 import { Link } from "react-router-dom";
+import { Provider } from "react-redux";
+import store from "./store";
 
 export default function Labs() {
   return (
+    <Provider store={store}>
     <div>
       <h1>Hariharasudan Savithri Anbarasu</h1>
 
@@ -23,7 +27,9 @@ export default function Labs() {
         <Route path="Lab1" element={<Lab1 />} />
         <Route path="Lab2" element={<Lab2 />} />
         <Route path="Lab3" element={<Lab3/>} />
+        <Route path="Lab4" element={<Lab4/>} />
       </Routes>
     </div>
+    </Provider>
   );
 }

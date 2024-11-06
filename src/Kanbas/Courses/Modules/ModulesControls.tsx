@@ -1,12 +1,20 @@
 import { FaPlus } from "react-icons/fa6";
 import GreenCheckmark from "./GreenCheckmark";
 import { IoIosCloseCircleOutline } from "react-icons/io";
+import ModuleEditor from "./ModuleEditor";
+import { useSelector } from "react-redux";
 
-export default function ModulesControls() {
+export default function ModulesControls({ moduleName, setModuleName, addModule }:
+  { moduleName: string; setModuleName: (title: string) => void; addModule: () => void; }) {
+    const { currentUser } = useSelector((state: any) => state.accountReducer);
+   const disabled = currentUser.role !== "FACULTY";
   return (
+    
     <div id="wd-modules-controls" className="text-nowrap">
+      {!disabled && (
+        <div>
       <button id="wd-add-module-btn" className="btn btn-lg btn-danger me-1 float-end">
-        <FaPlus className="position-relative me-2" style={{ bottom: "1px" }} />
+        <FaPlus className="position-relative me-2" style={{ bottom: "1px" }}  data-bs-toggle="modal" data-bs-target="#wd-add-module-dialog"/>
         Module</button>
       <div className="dropdown d-inline me-1 float-end">
         <button id="wd-publish-all-btn" className="btn btn-lg btn-secondary dropdown-toggle"
@@ -35,11 +43,10 @@ export default function ModulesControls() {
             Unpublish modules only
             </a>
           </li>
-          {/* Create two more items with IDs wd-unpublish-all-modules-and-items and
-              wd-unpublish-modules-only with labels Unpublish all modules and items
-              and Unpublish modules only */}
         </ul>
       </div>
+      </div>
+    )}
       <button id="wd-view-progress" className="btn btn-lg btn-secondary me-1 float-end">
         <FaPlus className="position-relative me-2" style={{ bottom: "1px" }} />
         View Progress
@@ -48,6 +55,8 @@ export default function ModulesControls() {
         <FaPlus className="position-relative me-2" style={{ bottom: "1px" }} />
         Collapse All buttons
         </button>
-      {/* Implement the View Progress and Collapse All buttons with IDs wd-view-progress and wd-collapse-all */}
+        <ModuleEditor dialogTitle="Add Module" moduleName={moduleName}
+                    setModuleName={setModuleName} addModule={addModule} />
+
     </div>
 );}
