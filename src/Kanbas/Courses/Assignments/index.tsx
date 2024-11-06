@@ -4,6 +4,8 @@ import { HiOutlinePencilAlt } from "react-icons/hi";
 import { useParams } from "react-router";
 import AssignmentControlButtons from "./AssignmentControlButtons";
 import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
+import LessonControlButtons from "./LessonControlButtons";
 
 export default function Assignments() {
   const { cid } = useParams();
@@ -23,7 +25,7 @@ export default function Assignments() {
           <div className="dropdown-toggle wd-title p-3 ps-2 bg-secondary ">
             <BsGripVertical className="me-2 fs-3 " />
             Assignments
-            <ControlButtons />
+            <LessonControlButtons />
           </div>
           <ul className="wd-assignment list-group rounded-0">
             {assignments
