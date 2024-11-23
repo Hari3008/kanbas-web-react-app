@@ -14,7 +14,7 @@ import * as assignmentClient from "./client";
 import GreenCheckmark from "./GreenCheckmark";
 export default function Assignments() {
   const { cid } = useParams();
-  
+
   const { currentUser } = useSelector((state: any) => state.accountReducer);
   const disabled = currentUser.role !== "FACULTY";
   const intialAssignment = {
@@ -68,15 +68,8 @@ export default function Assignments() {
                 </div>
                 {!disabled &&
                 <div className="position-absolute top-50 end-0 translate-middle-y">
-                  <FaTrash className="text-danger me-2" onClick={(e) => {
-                    e.preventDefault();
-
-                    const confirmDelete = window.confirm(
-                      "Are you sure you want to delete this assignment?"
-                    );
-                    if (confirmDelete) {
-                      removeAssignment(assignment._id);
-                    }
+                  <FaTrash className="text-danger me-2" onClick={() => {
+                    removeAssignment(assignment._id);
                   }} />
                 </div>
                 }
