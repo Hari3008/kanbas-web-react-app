@@ -14,6 +14,7 @@ import * as assignmentClient from "./client";
 import GreenCheckmark from "./GreenCheckmark";
 export default function Assignments() {
   const { cid } = useParams();
+  
   const { currentUser } = useSelector((state: any) => state.accountReducer);
   const disabled = currentUser.role !== "FACULTY";
   const intialAssignment = {
