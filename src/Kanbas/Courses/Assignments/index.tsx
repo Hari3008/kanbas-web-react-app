@@ -4,12 +4,14 @@ import { BsGripVertical } from "react-icons/bs";
 import { MdOutlineAssignment } from "react-icons/md";
 import { FaTrash } from "react-icons/fa";
 import AssignmentControlButtons from "./LessonControlButtons";
+import { HiOutlinePencilAlt } from "react-icons/hi";
 import DescControlButtons from "./LessonControlButtons";
 import AssignmentControls from "./AssignmentsControls";
 import { Link, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { setAssignment, deleteAssignment, setAssignments } from "./reducer";
 import * as assignmentClient from "./client";
+import GreenCheckmark from "./GreenCheckmark";
 export default function Assignments() {
   const { cid } = useParams();
   const { currentUser } = useSelector((state: any) => state.accountReducer);
@@ -47,14 +49,14 @@ export default function Assignments() {
             <BsGripVertical className="me-2 fs-3" />
             ASSIGNMENTS
             <AssignmentControlButtons />
-            <span className="float-end border boder-dark rounded p-1">40% of Total</span>
+            {/* <span className="float-end border boder-dark rounded p-1">40% of Total</span> */}
           </div>
           <ul className="wd-lessons list-group rounded-0">
             {assignments.map((assignment: any) => (
               <li className="wd-lesson list-group-item p-3 ps-1">
                 <div className="position-absolute top-50 start-0 translate-middle-y">
                   <BsGripVertical className="me-2 fs-3" />
-                  <MdOutlineAssignment className="me-2 fs-3" color="green" />
+                  <HiOutlinePencilAlt className="me-2 fs-3" color="green" />
                 </div>
                 <div className="position-absolute top-50 start-50 translate-middle w-75">
                   <Link className="wd-assignment-link text-black link-underline link-underline-opacity-0"
@@ -77,7 +79,7 @@ export default function Assignments() {
                   }} />
                 </div>
                 }
-                  <DescControlButtons />
+                  {/* <GreenCheckmark/> */}
                 
                 <br /><br /><br />
               </li>
