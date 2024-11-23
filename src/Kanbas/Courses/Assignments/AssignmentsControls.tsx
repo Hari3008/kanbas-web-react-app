@@ -1,45 +1,23 @@
 import { FaPlus } from "react-icons/fa6";
-import { FaSearch } from "react-icons/fa";
 import { useSelector } from "react-redux";
-import { Link } from "react-router-dom";
-
-export default function AssignmentsControls() {
-  const { currentUser } = useSelector((state: any) => state.accountReducer);
-
-  const isFaculty = currentUser.role === "FACULTY";
-
-  return (
-    <div id="wd-modules-controls" className="text-nowrap">
-      {isFaculty && (
-        <>
-          <Link to={`${new Date().getTime().toString()}`}>
-            <button id="wd-add-module-btn" className="btn btn-lg btn-danger me-2 float-end">
-              <FaPlus className="position-relative me-2" style={{ bottom: "1px" }} />
-              Assignment
-            </button>
-          </Link>
-
-          <button id="wd-view-progress" className="btn btn-lg btn-secondary me-2 float-end">
+import { Link, useParams } from "react-router-dom";
+export default function AssignmentControls(
+    { setAssignment }: { setAssignment: () => void; }
+) {
+    const {cid} = useParams();
+    const { currentUser } = useSelector((state: any) => state.accountReducer);
+  const disabled = currentUser.role !== "FACULTY";
+    
+    return (<><input id="wd-search-assignment" className="form-control float-start w-50" type="search" placeholder="&#128269; Search.." />{!disabled && <div id="wd-modules-controls" className="text-nowrap">
+        <Link to={`/Kanbas/Courses/${cid}/Assignments/new`}>
+            <button id="wd-add-assignment" className="btn btn-lg btn-danger me-1 float-end" onClick={setAssignment}>
+                <FaPlus className="position-relative me-2" style={{ bottom: "1px" }} />
+                Assignment</button>
+        </Link>
+        <button id="wd-add-assignment-group" className="btn btn-lg btn-secondary me-1 float-end">
             <FaPlus className="position-relative me-2" style={{ bottom: "1px" }} />
-            Group
-          </button>
-        </>
-      )}
-
-      <div className="float-end me-5 ">
-        <div className="input-group mt-1" style={{ width: "300px" }}>
-          <span className="input-group-text" id="basic-addon1">
-            <FaSearch />
-          </span>
-          <input
-            type="text"
-            className="form-control"
-            placeholder="Search..."
-            aria-label="Search"
-            aria-describedby="basic-addon1"
-          />
-        </div>
-      </div>
-    </div>
-  );
+            Group</button>
+    </div>}
+    </>
+    );
 }
